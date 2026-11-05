@@ -1,9 +1,9 @@
 <template>
   <div class="szd__tb__wrapper" style="padding-top: 5px">
     <!-- 功能按钮 -->
-    <div class="szd__tb__top" style="justify-content: space-between">
+    <div class="szd__tb__top" v-if="['A', 'B', 'C'].includes(objData.header.bussStatus) && SR.szdopt === 'U'" style="justify-content: space-between">
       <div>
-        <szd-button label="扫码" :szdopt="SR.szdopt" @click="handleScanOpen('C')" />
+        <szd-button label="扫码" :szdopt="SR.szdopt" @click="handleScanOpen('A')" />
       </div>
     </div>
     <!-- 表格输出 -->
@@ -63,7 +63,9 @@
       },
       // 每次扫描调用：累加盘点数量，参数code为扫描结果字符串
       handleScanEvery(code) {
-        if (!code) return;
+        if (!code) {
+          return;
+        }
         const matchedItem = this.objData.itemList.find(item => item.mtlCode && item.mtlCode === code);
         if (matchedItem) {
           // 盘点数量+1，同步计算差异

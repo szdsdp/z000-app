@@ -8,7 +8,7 @@
       </div>
     </div>
     <!-- 功能按钮 -->
-    <div class="szd__tb__top" style="padding-bottom: 5px">
+    <div class="szd__tb__top" style="padding-top: 30px; padding-bottom: 20px">
       <!-- 工作流按钮 -->
       <szd-wf-button :routerCode="SR.routerCode" btnHide="FGJQRS" :wfOper="wfOper" :bussBase="objData.header" @submit="submitForm" />
     </div>

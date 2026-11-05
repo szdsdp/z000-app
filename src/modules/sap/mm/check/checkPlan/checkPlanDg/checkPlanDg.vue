@@ -223,10 +223,12 @@
     padding: 10px;
     margin-bottom: -20px;
   }
+
   .title-container {
     display: flex;
     align-items: center;
   }
+
   .title-bar {
     width: 4px;
     height: 20px;
@@ -234,12 +236,14 @@
     margin-right: 8px;
     border-radius: 2px;
   }
+
   .reverse-popup {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     width: 300px;
   }
+
   .reverse-popup h4 {
     margin: 0 0 12px 0;
     font-size: 16px;
